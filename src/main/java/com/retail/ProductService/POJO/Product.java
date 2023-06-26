@@ -38,7 +38,7 @@ private String prod_image;
 private String prod_desc;
 
 @Column(name="stock")
-private Boolean stock;
+private Integer stock;
 
 @Column(name="category_id")
 private Integer category_id;
@@ -88,16 +88,16 @@ public void setProd_desc(String prod_desc) {
 	this.prod_desc = prod_desc;
 }
 
-public Boolean getStock() {
+public Integer getStock() {
 	return stock;
 }
 
-public void setStock(Boolean stock) {
+public void setStock(Integer stock) {
 	this.stock = stock;
 }
 
 public Product(Integer prod_id, String prod_name, Integer prod_price, String prod_image, String prod_desc,
-		Boolean stock) {
+		Integer stock) {
 	super();
 	this.prod_id = prod_id;
 	this.prod_name = prod_name;

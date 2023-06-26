@@ -1,5 +1,16 @@
 package com.retail.ProductService.Categories;
 
+import com.retail.ProductService.POJO.Product;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+//@Builder
+//@NoArgsConstructor
+@AllArgsConstructor
 
 public class ProductWrapper {
 
@@ -14,7 +25,13 @@ private String prod_image;
 
 private String prod_desc;
 
-private Boolean stock;
+private Integer stock;
+
+public ProductWrapper() {
+	// super();
+	}
+
+
 
 public Integer getProd_id() {
 	return prod_id;
@@ -56,28 +73,26 @@ public void setProd_desc(String prod_desc) {
 	this.prod_desc = prod_desc;
 }
 
-public Boolean getStock() {
+public Integer getStock() {
 	return stock;
 }
 
-public void setStock(Boolean stock) {
+public void setStock(Integer stock) {
 	this.stock = stock;
 }
 
-public ProductWrapper(Integer prod_id, String prod_name, Integer prod_price, String prod_image, String prod_desc,
-		Boolean stock) {
-	super();
-	this.prod_id = prod_id;
-	this.prod_name = prod_name;
-	this.prod_price = prod_price;
-	this.prod_image = prod_image;
-	this.prod_desc = prod_desc;
-	this.stock = stock;
-}
+//public ProductWrapper(Integer prod_id, String prod_name, Integer prod_price, String prod_image, String prod_desc,
+//		Boolean stock) {
+////	super();
+//	this.prod_id = prod_id;
+//	this.prod_name = prod_name;
+//	this.prod_price = prod_price;
+//	this.prod_image = prod_image;
+//	this.prod_desc = prod_desc;
+//	this.stock = stock;
+//}
 
-public ProductWrapper() {
-	super();
-}
+
 
 
 

@@ -17,6 +17,13 @@ public interface ProductServices {
 
 	ResponseEntity<List<ProductWrapper>> getByCategoryid(Integer category_id);
 
-	ResponseEntity<ProductWrapper> getByName(String name);
+	ResponseEntity<List<ProductWrapper>> getByName(String name);
+	
+	Integer updateStock (List<Product> product);
+	
+
+	
+//	ResponseEntity<ProductWrapper> findByNameLike(String name);
+
 
 }

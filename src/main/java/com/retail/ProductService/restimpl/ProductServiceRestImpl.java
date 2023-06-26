@@ -51,10 +51,32 @@ public class ProductServiceRestImpl implements ProductServiceRest{
 	}
 
 	@Override
-	public ResponseEntity<ProductWrapper> getByName(String name) {
+	public ResponseEntity<List<ProductWrapper>> getByName(String name) {
 		// TODO Auto-generated method stub
 		return productService.getByName(name);
+		
+		
+		
 	}
+	
+	
+	@Override
+	public Integer updateStock(List<Product> product) {
+		// TODO Auto-generated method stub
+		return productService.updateStock(product);
+		
+		
+		
+	}
+	
+	
+	
+	
+//	@Override
+//	public ResponseEntity<ProductWrapper> findByNameLike(String name) {
+//		// TODO Auto-generated method stub
+//		return productService.(name);
+//	}
 
 
 }
